@@ -54,8 +54,7 @@ public class FlutterWebView implements PlatformView, MethodCallHandler  {
     InAppWebViewOptions options = new InAppWebViewOptions();
     options.parse(initialOptions);
 
-
-    webView = new InAppWebView(Shared.activity, this, id, options, containerView);
+    webView = new InAppWebView(Shared.applicationContext, this, id, options, containerView);
     displayListenerProxy.onPostWebViewInitialization(displayManager);
 
     // fix https://github.com/pichillilorenzo/flutter_inappwebview/issues/182
